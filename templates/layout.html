@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+        <title>Kijabe Immunization System - {{ title }}</title>
+    {% else %}
+        <title>Kijabe Immunization System</title>
+    {% endif %}
+</head>
+<body>
+
+<header class="nav-header">
+<nav>
+    <div class="logo-item">
+        <img src="static/img/kijabe_hospital_logo.jpeg" alt="Girl in a jacket" width="150" height="50">
+            <div class="nav-link" >
+                <a href="/">Login</a>
+                <a href="/">Services</a>
+                <a href="/">Wellness Packages</a>
+                <a href="/">Contact Us</a>
+                <a href="/">Feedback</a>
+            </div>
+    </div>
+
+</nav>
+</header>
+<div>
+    {% block content %}
+    {% endblock %}
+
+</div>
+
+</body>
+</html>

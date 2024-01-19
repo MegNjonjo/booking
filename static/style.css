@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+html{
+font-size: 10px;
+font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: #fafafa;
+  color: #333333;
+  margin-top: 5rem;
+}
+
+a{
+text-decoration: none;
+}
+.container{
+min-height: 100vh;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.hero{
+background-image: url(img/IMG_2.png);
+background-size: cover;
+background-position: top-center;
+position: relative;
+z-index: 1;
+}
+
+''' dark overlay'''
+.hero::after{
+content: '';
+position: absolute;
+left: 0;
+right: 0;
+height: 100%;
+width: 100%;
+background-color: black;
+opacity: .7;
+z-index: -1;
+}
+'''dark overlay'''
+.hero{
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 50px;
+justify-content: flex-start;
+}
+.hero h1{
+display: block;
+width: fit-content;
+font-size: 4rem;
+position: relative;
+color: white;
+}
+.hero a.cta{
+display: inline-block;
+padding: 10px 30px;
+color: black;
+background-color: transparent;
+border: 2px solid blue;
+font-size: 2rem;
+text-transform: uppercase;
+letter-spacing: .1rem;
+margin-top: 30px;
+transition: .3s ease;
+transition-property: background-color, color;
+}
+.hero a.cta:hover{
+color: white;
+background-color: blue;
+}
+
+'''Partners section'''
+.partners{
+
+}
+.partner-container{
+flex-direction: column;
+}
+
+'''end of Partners section'''
+
+
+'''Navigation bar'''
+nav{
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+position: fixed;
+top: 0;
+width: 100%;
+        }
+nav a {
+            float: left;
+            display: block;
+            color: blue;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 2rem;
+}
+nav a:hover {
+            background-color: #ddd;
+            color: black;
+}
+
+
+.nav-header {
+   min-height: 20vh;
+   width: 100%;
+   background-position: center;
+   position: relative;
+   margin: 0;
+   padding: 0;
+}
+
+.nav-link{
+text-align: left;
+}
+
+'''end of navigation bar'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
