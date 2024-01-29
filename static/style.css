@@ -27,6 +27,14 @@ align-items: center;
 justify-content: center;
 }
 
+.container-form{
+min-height: 100vh;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
 .hero{
 background-image: url(img/IMG_2.png);
 background-size: cover;
@@ -99,7 +107,7 @@ overflow: hidden;
 background-color: #333;
 position: fixed;
 top: 0;
-width: 100%;
+width: 50%;
         }
 nav a {
             float: left;
@@ -117,7 +125,7 @@ nav a:hover {
 
 
 .nav-header {
-   min-height: 20vh;
+   min-height: 1vh;
    width: 100%;
    background-position: center;
    position: relative;
@@ -130,6 +138,64 @@ text-align: left;
 }
 
 '''end of navigation bar'''
+
+''' form section'''
+/* Style the form container */
+.container-form {
+  max-width: 600px; /* Set your desired maximum width */
+  margin: auto; /* Center the form horizontally */
+  padding: 20px; /* Add padding for better spacing */
+}
+
+/* Style the form fieldset */
+form fieldset {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Style the form legend */
+form legend {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* Style form labels */
+form label.form-control-label {
+  display: block;
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+
+/* Style form input and textarea fields */
+form input.form-control,
+form textarea.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* Style the submit button */
+form .btn-outline-info {
+  background-color: #17a2b8;
+  color: #fff;
+  border: 1px solid #17a2b8;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Hover effect for the submit button */
+form .btn-outline-info:hover {
+  background-color: #12869b;
+  border: 1px solid #12869b;
+}
+
+
+
+'''end of form section'''
 
 
 
