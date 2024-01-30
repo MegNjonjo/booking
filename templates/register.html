@@ -1,5 +1,16 @@
-{% extends "layout.html" %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+        <title>Kijabe Immunization System - {{ title }}</title>
+    {% else %}
+        <title>Kijabe Immunization System</title>
+    {% endif %}
+</head>
+<body>
 <div class="container-form">
     <form method="POST" action="">
         {{ form.hidden_tag()  }}
@@ -28,10 +39,12 @@
     </form>
 </div>
 <div class="border-top pt-3">
-    <small class="text-muted">
+    <span class="text-muted">
         Already Have An Account? <a class="ml-2" href="{{ url_for('login') }}">Sign In</a>
-    </small>
+    </span>
 </div>
+</body>
+</html>
 
 
-{% endblock %}
+

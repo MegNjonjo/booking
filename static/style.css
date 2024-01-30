@@ -104,17 +104,18 @@ list-style-type: none;
 margin: 0;
 padding: 0;
 overflow: hidden;
-background-color: #333;
+background-color: grey;
 position: fixed;
 top: 0;
 width: 50%;
-        }
+
+}
 nav a {
             float: left;
             display: block;
             color: blue;
             text-align: center;
-            padding: 14px 16px;
+            padding: 2px 4px;
             text-decoration: none;
             font-size: 2rem;
 }
@@ -131,10 +132,11 @@ nav a:hover {
    position: relative;
    margin: 0;
    padding: 0;
+   background-color: grey;
 }
 
 .nav-link{
-text-align: left;
+text-align: right;
 }
 
 '''end of navigation bar'''
@@ -142,18 +144,22 @@ text-align: left;
 ''' form section'''
 /* Style the form container */
 .container-form {
-  max-width: 600px; /* Set your desired maximum width */
+  max-width: 2500px; /* Set your desired maximum width */
   margin: auto; /* Center the form horizontally */
   padding: 20px; /* Add padding for better spacing */
+
+
 }
 
 /* Style the form fieldset */
 form fieldset {
-  border: 1px solid #ddd;
+  border: 1px solid black;
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 20px;
-}
+  width: 150%;
+
+  }
 
 /* Style the form legend */
 form legend {
@@ -164,7 +170,7 @@ form legend {
 /* Style form labels */
 form label.form-control-label {
   display: block;
-  font-size: 1em;
+  font-size: 2em;
   margin-bottom: 5px;
 }
 
@@ -179,7 +185,7 @@ form textarea.form-control {
 
 /* Style the submit button */
 form .btn-outline-info {
-  background-color: #17a2b8;
+  background-color: blue;
   color: #fff;
   border: 1px solid #17a2b8;
   border-radius: 5px;
@@ -192,6 +198,13 @@ form .btn-outline-info:hover {
   background-color: #12869b;
   border: 1px solid #12869b;
 }
+
+form .border-top {
+color: red;
+
+}
+
+
 
 
 
