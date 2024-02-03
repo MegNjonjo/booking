@@ -16,9 +16,6 @@ body {
   margin-top: 5rem;
 }
 
-a{
-text-decoration: none;
-}
 .container{
 min-height: 100vh;
 width: 100%;
@@ -110,43 +107,65 @@ top: 0;
 width: 50%;
 
 }
-nav a {
-            float: left;
-            display: block;
-            color: blue;
-            text-align: center;
-            padding: 2px 4px;
-            text-decoration: none;
-            font-size: 2rem;
+.navigation a {
+position: relative;
+font-size: 2em;
+color: white;
+text-decoration: none;
+font-weight: 1500;
+margin-left: 40px;
+
+
 }
 nav a:hover {
-            background-color: #ddd;
+            background-color: white;
             color: black;
 }
 
 
 .nav-header {
-   min-height: 1vh;
    width: 100%;
-   background-position: center;
-   position: relative;
-   margin: 0;
-   padding: 0;
-   background-color: grey;
+   position: fixed;
+   top: 0;
+   left: 0;
+   padding: 20px 100px;
+   background: grey;
+   display: flex;
+   justify-content: space-between;
+   align-items: left;
+   z-index: 99;
+
 }
 
-.nav-link{
-text-align: right;
+.navigation .btn-login{
+width: 130px;
+height: 50px;
+background: transparent;
+border: 2px solid black;
+outline: none;
+border-radius: 6px;
+cursor: pointer;
+font-size: 2em;
+color: black;
+font-weight: 1200;
+margin-left: 40px;
+transition: .5s;
+}
+
+.navigation .btn-login:hover{
+background-color: blue;
+color: black;
 }
 
 '''end of navigation bar'''
 
 ''' form section'''
-/* Style the form container */
+
 .container-form {
-  max-width: 2500px; /* Set your desired maximum width */
-  margin: auto; /* Center the form horizontally */
-  padding: 20px; /* Add padding for better spacing */
+max-width: 2500px;
+margin: auto;
+padding: 20px;
+background: blue;
 
 
 }
@@ -163,8 +182,9 @@ form fieldset {
 
 /* Style the form legend */
 form legend {
-  font-size: 1.2em;
+  font-size: 4em;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 /* Style form labels */
@@ -185,9 +205,9 @@ form textarea.form-control {
 
 /* Style the submit button */
 form .btn-outline-info {
-  background-color: blue;
-  color: #fff;
-  border: 1px solid #17a2b8;
+  background-color: grey;
+  color: white;
+  border: 1px solid grey;
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
@@ -195,12 +215,13 @@ form .btn-outline-info {
 
 /* Hover effect for the submit button */
 form .btn-outline-info:hover {
-  background-color: #12869b;
-  border: 1px solid #12869b;
+  background-color: blue;
+  border: 1px solid blue;
 }
 
 form .border-top {
-color: red;
+font-weight: bold;
+color: black;
 
 }
 

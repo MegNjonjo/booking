@@ -13,14 +13,16 @@
 <body>
 
 <header class="nav-header">
-<nav>
-    <div class="nav-link">
-        <a href="/">Login</a>
+<nav class="navigation">
+        <a href="/">Home</a>
         <a href="/">Services</a>
         <a href="/">Wellness Packages</a>
         <a href="/">Contact Us</a>
         <a href="/">Feedback</a>
-    </div>
+        <a class="ml-2" href="{{ url_for('login') }}">
+            <button class="btn-login">Login</button>
+        </a>
+
 </nav>
 </header>
 <div>
