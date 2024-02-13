@@ -1,8 +1,7 @@
-from flask import Flask, render_template, url_for, flash, redirect
-from forms import RegistrationForm, LoginForm
-app = Flask(__name__)
-
-app.config['SECRET_KEY']= 'ceddd47b15505bba706d169d651da11'
+from flask import render_template, url_for, flash, redirect
+from kijabe import app
+from kijabe.forms import RegistrationForm, LoginForm
+from kijabe.models import User, Feedback
 
 @app.route("/")
 @app.route("/home")
@@ -40,6 +39,3 @@ def dashboard():
 @app.route("/wellness packages")
 def wellness():
     return "<h1>This is my wellness page</h1>"
-
-if __name__ == '__main__':
-    app.run(debug=True)
