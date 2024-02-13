@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efe4b3ee-025d-4567-88cd-ac991ae39977" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Booking.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kijabe.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/IMG_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/IMG_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/IMG_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/Kenya_Emergency_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/Kenya_Healthcare_Federation_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/Ministry_of_Health_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/NHIF_logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/USAID_Logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/kijabe_hospital_logo.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/services.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/trial.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
