@@ -3,23 +3,39 @@
   <component name="ChangeListManager">
     <list default="true" id="50f22409-b49e-4425-bbb0-a17eec41807e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kijabe/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/kijabe/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kijabe/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/kijabe/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kijabe/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/kijabe/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kijabe/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/kijabe/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kijabe/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/kijabe/templates/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kijabe/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/kijabe/templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kijabe/templates/trial.html" beforeDir="false" afterPath="$PROJECT_DIR$/kijabe/templates/doctor.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2cqndkVtoUMrGME4fp1nVmsEHxl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -30,6 +46,7 @@
     <option name="sortByType" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
@@ -43,5 +60,16 @@
       <updated>1708848078910</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

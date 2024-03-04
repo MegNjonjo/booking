@@ -34,3 +34,22 @@ class LoginForm(FlaskForm):
     remember = BooleanField('Remember Me')
     submit = SubmitField('Log In')
 
+
+class DoctorForm(FlaskForm):
+    email = StringField('Email',
+                        validators=[DataRequired(), Email()])
+    password = PasswordField('Password',
+                             validators=[DataRequired()])
+    remember = BooleanField('Remember Me')
+    submit = SubmitField('Log In')
+
+
+class AppointmentForm(FlaskForm):
+    title = StringField('Title',
+                        validators=[DataRequired()])
+    
+
+
+
+
+

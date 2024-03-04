@@ -6,6 +6,10 @@ from flask_login import UserMixin
 def load_user(user_id):
     return User.query.get(int(user_id))
 
+@login_manager.user_loader
+def load_doctor(doctor_id):
+    return Doctor.query.get(int(doctor_id))
+
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(20), unique=True, nullable=False)
@@ -17,7 +21,7 @@ class User(db.Model, UserMixin):
     def __repr__(self):
         return f"User('{self.username}', '{self.email}', '{self.profile_pic}')"
 
-class Doctor(db.Model):
+class Doctor(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(20), unique=True, nullable=False)
     email = db.Column(db.String(100), unique=True, nullable=False)
@@ -38,7 +42,6 @@ class Appointment(db.Model):
 
     def __repr__(self):
         return f"Appointment('{self.title}', '{self.date}', '{self.status}')"
-
 
 
 class Feedback(db.Model):
