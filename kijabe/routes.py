@@ -1,7 +1,7 @@
 from flask import render_template, url_for, flash, redirect, request
 from kijabe import app, db, bcrypt
-from kijabe.forms import RegistrationForm, LoginForm, DoctorForm
-from kijabe.models import User, Feedback, Doctor
+from kijabe.forms import RegistrationForm, LoginForm, DoctorForm, AdminForm, AppointmentForm
+from kijabe.models import User, Feedback, Doctor, Admin, Appointment
 from flask_login import login_user, current_user, logout_user
 
 @app.route("/")
@@ -9,11 +9,12 @@ from flask_login import login_user, current_user, logout_user
 def home():
     return render_template('index.html')
 
-@app.route("/register", methods=['GET', 'POST'])
+@app.route("/home/register/", methods=['GET', 'POST'])
 def register():
+    form = RegistrationForm()
     if current_user.is_authenticated:
         return redirect(url_for('dashboard'))
-    form = RegistrationForm()
+
     if form.validate_on_submit():
         hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
         user = User(username=form.username.data, email=form.email.data, password=hashed_password)
@@ -21,35 +22,59 @@ def register():
         db.session.commit()
         flash('Your account has been created!', 'success')
         return redirect(url_for('dashboard'))
-    return render_template('register.html', title='Register', form=form)
+    return render_template('user/register.html', title='Register', form=form)
 
-@app.route("/doctor_view", methods=['GET', 'POST'])
-def doctor():
+
+@app.route("/home/admin/", methods=['GET', 'POST'])
+def admin():
     if current_user.is_authenticated:
-        return redirect(url_for('dashboard'))
+        return redirect(url_for('admin/dashboard'))
+    form = AdminForm()
+    if form.validate_on_submit():
+        admin = Admin.query.filter_by(username=form.username.data).first()
+        if form.email.data == 'megnjonjo@gmail.com' and form.password.data == 'testing':
+            flash(f'You have been logged in!', 'success')
+            if admin and bcrypt.check_password_hash(admin.password, form.password.data):
+                login_user(admin, remember=form.remember.data)
+            return redirect(url_for('admin/dashboard'))
+        else:
+            flash('Login Unsuccessful. Please check email and password', 'danger')
+    return render_template('admin/login.html', appointments=appointments, title='Admin', form=form)
+
+
+@app.route("/home/doctor_view/", methods=['GET', 'POST'])
+def doctor_view():
+    if current_user.is_authenticated:
+        return redirect(url_for('doctor/dashboard'))
     form = DoctorForm()
     if form.validate_on_submit():
         doctor = Doctor.query.filter_by(email=form.email.data).first()
         if doctor and bcrypt.check_password_hash(doctor.password, form.password.data):
             login_user(doctor, remember=form.remember.data)
-            return redirect(url_for('dashboard'))
+            return redirect(url_for('doctor/dashboard'))
         else:
             flash('Login Unsuccessful. Please check email and password', 'danger')
-    return render_template('doctor.html', appointments=appointments, title='Doctor', form=form)
+    return render_template('doctor/login.html', appointments=appointments, title='Doctor', form=form)
 
-@app.route("/login", methods=['GET', 'POST'])
+@app.route("/login/", methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
-        return redirect(url_for('dashboard'))
+        return redirect(url_for('user/dashboard'))
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
         if user and bcrypt.check_password_hash(user.password, form.password.data):
             login_user(user, remember=form.remember.data)
-            return redirect(url_for('dashboard'))
+            return redirect(url_for('user_dashboard'))
         else:
             flash('Login Unsuccessful. Please check email and password', 'danger')
-    return render_template('login.html', title='Login', form=form)
+    return render_template('user/login.html', title='Login', form=form)
+
+
+@app.route("/login/dashboard")
+def user_dashboard():
+
+    return render_template('user/dashboard.html', appointments=appointments)
 
 @app.route("/logout")
 def logout():
@@ -62,9 +87,6 @@ def services():
     return render_template('services.html', title='Services')
 
 
-@app.route("/dashboard")
-def dashboard():
-    return render_template('dashboard.html', title='Dashboard')
 
 
 @app.route("/wellness packages")
@@ -74,11 +96,13 @@ def wellness():
 
 appointments = []
 
-'''@app.route("/book_appointment")
+@app.route("/dashboard/book_appointment", methods=['GET', 'POST'])
 def book_appointment():
+    form = AppointmentForm()
     if request.method == 'POST':
         date = request.form['date']
         time = request.form['time']
+
 
         if is_available(date, time):
             appointment = {'date': date, 'time': time}
@@ -87,10 +111,25 @@ def book_appointment():
         else:
             return f'This slot is not available'
 
+
+
 def is_available(date, time):
     for appointment in appointments:
         if appointment['date'] == date and appointment['time'] == time:
             return False
         return True
 
-'''
+
+@app.route("/doctor/view_appointments")
+def view_appointments():
+
+    return render_template('doctor/appointments.html', title=title, appointments=appointments)
+
+def is_available(date, time):
+        for appointment in appointments:
+            if appointment['date'] == date and appointment['time'] == time:
+                return False
+            return True
+
+
+

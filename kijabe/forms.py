@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, BooleanField, validators
+from wtforms import StringField, PasswordField, SubmitField, BooleanField, DateField, TextAreaField, validators
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
 from kijabe.models import User
 
@@ -47,8 +47,20 @@ class DoctorForm(FlaskForm):
 class AppointmentForm(FlaskForm):
     title = StringField('Title',
                         validators=[DataRequired()])
-    
+    description = TextAreaField('Description',
+                             validators=[DataRequired(), Length(min=20, max=150)])
+    date = DateField('Date',
+                             validators=[DataRequired()])
+    submit = SubmitField('Book Appointment')
 
+
+class AdminForm(FlaskForm):
+    email = StringField('Email',
+                        validators=[DataRequired(), Email()])
+    password = PasswordField('Password',
+                             validators=[DataRequired()])
+    remember = BooleanField('Remember Me')
+    submit = SubmitField('Log In')
 
 
 

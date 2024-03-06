@@ -7,8 +7,21 @@ def load_user(user_id):
     return User.query.get(int(user_id))
 
 @login_manager.user_loader
-def load_doctor(doctor_id):
+def load_user(doctor_id):
     return Doctor.query.get(int(doctor_id))
+
+@login_manager.user_loader
+def load_user(admin_id):
+    return Admin.query.get(int(admin_id))
+
+class Admin(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(20), unique=True, nullable=False)
+    password = db.Column(db.String(60), nullable=False)
+    profile_pic = db.Column(db.String(20), nullable=False, default='IMG_3.png')
+
+    def __repr__(self):
+        return f"Admin('{self.username}', '{self.email}', '{self.profile_pic}')"
 
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
