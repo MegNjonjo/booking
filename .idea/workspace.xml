@@ -3,15 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="50f22409-b49e-4425-bbb0-a17eec41807e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kijabe/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/kijabe/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kijabe/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/kijabe/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kijabe/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/kijabe/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kijabe/templates/dashboard.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kijabe/templates/doctor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kijabe/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/kijabe/static/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kijabe/templates/admin/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/kijabe/templates/admin/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kijabe/templates/doctor/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/kijabe/templates/doctor/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kijabe/templates/doctor/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/kijabe/templates/doctor/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kijabe/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/kijabe/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kijabe/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/kijabe/templates/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kijabe/templates/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kijabe/templates/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kijabe/templates/services.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kijabe/templates/user/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/kijabe/templates/user/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kijabe/templates/user/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/kijabe/templates/user/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kijabe/templates/user/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/kijabe/templates/user/layout.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

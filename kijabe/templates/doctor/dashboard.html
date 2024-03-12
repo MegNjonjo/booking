@@ -1,21 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Patient</title>
-</head>
-<body>
+{% extends "doctor/layout.html" %}
+{% block content %}
+<div class="logo-container">
+    <img src="{{ url_for('static', filename='img/kijabe_hospital_logo.jpeg') }}">
+        <h1>
+            Kijabe Hospital Management System
+        </h1>
+</div>
 
-<h1>This is my user dashboard page</h1>
-<header class="nav-header">
-<nav class="navigation">
-        <a href="/">Home</a>
-        <a href="/">Services</a>
-        <a href="/">Wellness Packages</a>
-        <a href="/">Contact Us</a>
-        <a href="/">Feedback</a>
-            <a class="btn" href="{{ url_for('home') }}">
-            <button class="btn-login">Logout</button>
-            </a>
-</nav>
-</body>
-</html>
+
+<div class="container">
+    <h1>This is my Doctor Dashboard page</h1>
+</div>
+
+
+{% endblock %}

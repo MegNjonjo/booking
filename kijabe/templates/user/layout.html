@@ -11,7 +11,6 @@
     {% endif %}
 </head>
 <body>
-
 <header class="nav-header">
 <nav class="navigation">
         <a href="{{ url_for('home')}}">Home</a>
@@ -19,13 +18,13 @@
         <a href="/">Wellness Packages</a>
         <a href="/">Contact Us</a>
         <a href="/">Feedback</a>
-            <a class="btn" href="{{ url_for('login') }}">
-            <button class="btn-login">Logout</button>
-            </a>
+        <a class="btn-info" href="{{ url_for('login') }}">Login</a>
 
 </nav>
 </header>
-<div id="content">
+
+
+<div id="user-content">
     {% block content %}
     {% endblock %}
 </div>
