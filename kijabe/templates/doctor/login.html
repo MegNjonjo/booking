@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="container-form">
-    <form method="POST" action="">
+    <form method="POST" action="{{ url_for('doctor_login') }}">
         {{ form.hidden_tag()  }}
         <fieldset class="form-group">
             <legend class="border-bottom mb-4">Login</legend>

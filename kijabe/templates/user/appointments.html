@@ -15,7 +15,7 @@
     <form method="POST" action="{{ url_for('book_appointment') }}">
         {{ form.hidden_tag() }}
         <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Book Appointment</legend>
+            <legend class="border-bottom mb-2">Book Appointment</legend>
             <div class="form-group">
                 {{ form.title.label(class="form-control-label") }}
                 {{ form.title(size=30) }}
@@ -37,16 +37,14 @@
                     <span style="color: red;">{{ error }}</span>
                 {% endfor %}
             </div>
-            <div>
-                <button type="submit">Create Appointment</button>
-            </div>
+
 
         </fieldset>
         <div class="form-group">
             {{ form.submit(class="btn btn-outline-info") }}
         </div>
     </form>
-    <a href="{{ url_for('dashboard') }}">Back to Appointment List</a>
+    <a href="{{ url_for('user_dashboard') }}">Back to Appointment List</a>
 
 </div>
 </body>

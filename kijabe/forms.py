@@ -1,3 +1,4 @@
+from datetime import datetime
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField, DateField, TextAreaField, validators
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
@@ -48,10 +49,15 @@ class AppointmentForm(FlaskForm):
     title = StringField('Title',
                         validators=[DataRequired()])
     description = TextAreaField('Description',
-                             validators=[DataRequired(), Length(min=20, max=150)])
+                             validators=[DataRequired()])
     date = DateField('Date',
                              validators=[DataRequired()])
     submit = SubmitField('Book Appointment')
+
+
+    def validate_date(self, date):
+        if date.data <= datetime.now().date():
+            raise ValidationError('Please choose a future date.')
 
 
 class AdminForm(FlaskForm):
@@ -62,6 +68,19 @@ class AdminForm(FlaskForm):
     remember = BooleanField('Remember Me')
     submit = SubmitField('Log In')
 
+
+class DoctorRegistrationForm(FlaskForm):
+    username = StringField('Username',
+                           validators=[DataRequired()])
+    email = StringField('Email',
+                        validators=[DataRequired(), Email()])
+    department = StringField('Department',
+                           validators=[DataRequired()])
+    contact = StringField('Contact',
+                           validators=[DataRequired()])
+    password = PasswordField('Password',
+                             validators=[DataRequired()])
+    submit = SubmitField('Sign Up')
 
 
 

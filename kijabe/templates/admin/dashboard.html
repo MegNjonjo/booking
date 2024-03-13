@@ -1,0 +1,24 @@
+{% extends "admin/layout.html" %}
+{% block content %}
+
+<div class="user-container">
+    <div class="menu-row">
+        <a href="" class="menu-btn">Profile</a>
+        <a href="{{ url_for('register_doctor') }}" class="menu-btn">Register Doctor</a>
+        <a href="{{ url_for('admin_get_all_doctor') }}" class="menu-btn">All Doctor</a>
+        <a href="{{ url_for('admin_get_all_user') }}" class="menu-btn">All User</a>
+        <a href="{{ url_for('logout')}}" class="menu-btn">Logout</a>
+
+    </div>
+</div>
+<h1>This is my admin index file</h1>
+
+
+{% endblock %}
+
+
+
+
+
+
+

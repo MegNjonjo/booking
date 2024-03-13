@@ -11,9 +11,9 @@ font-family: 'Montserrat', sans-serif;
 }
 
 body {
-  background: #fafafa;
+  background: cream;
   color: #333333;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 
 .container{
@@ -32,134 +32,29 @@ align-items: center;
 justify-content: center;
 }
 
-.hero{
-background-image: url(img/IMG_2.png);
-background-size: cover;
-background-position: top-center;
-position: relative;
-z-index: 1;
-}
 
-''' dark overlay'''
-.hero::after{
-content: '';
-position: absolute;
-left: 0;
-right: 0;
-height: 100%;
-width: 100%;
-background-color: black;
-opacity: .7;
-z-index: -1;
-}
-'''dark overlay'''
-.hero{
-max-width: 1200px;
-margin: 0 auto;
-padding: 0 50px;
-justify-content: flex-start;
-}
-.hero h1{
-display: block;
-width: fit-content;
-font-size: 4rem;
-position: relative;
-color: white;
-}
-.hero a.cta{
-display: inline-block;
-padding: 10px 30px;
-color: black;
-background-color: transparent;
-border: 2px solid blue;
-font-size: 2rem;
-text-transform: uppercase;
-letter-spacing: .1rem;
-margin-top: 30px;
-transition: .3s ease;
-transition-property: background-color, color;
-}
-.hero a.cta:hover{
-color: white;
-background-color: blue;
-}
-
-'''Navigation bar'''
-nav{
-list-style-type: none;
-margin: 0;
-padding: 0;
-overflow: hidden;
-background-color: grey;
-position: fixed;
-top: 0;
-width: 50%;
-z-index: 1000;
-
-}
-.navigation a {
-font-size: 2em;
-color: white;
-text-decoration: none;
-font-weight: 1500;
-padding: 15px 20px;
-transition: background-color 0.5s, color 0.5s
-
-
-}
-nav a:hover {
-            background-color: white;
-            color: black;
-}
-
-
-.nav-header {
-   width: 100%;
-   position: fixed;
-   top: 0;
-   left: 0;
-   padding: 20px;
-   background: grey;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   z-index: 999;
-
-}
-
-.btn-info{
-width: 130px;
-height: 50px;
-background: transparent;
-border: 2px solid black;
-outline: none;
-border-radius: 6px;
-cursor: pointer;
-font-size: 2em;
-color: black;
-font-weight: 1200;
-transition: background-color 0.5s, color 0.5s;
-}
-
-.btn-info:hover{
-background-color: blue;
-color: black;
-}
-
-'''end of navigation bar'''
 
 ''' form section'''
+
+.form-group {
+background-image: url("/static/IMG_2.png")
+width: 100%;
+height: 100vh;
+background-size: cover;
+background-position: center;
+position: relative;
+}
 
 .container-form {
 max-width: 2500px;
 margin: auto;
 padding: 20px;
-background: blue;
+
 
 
 }
 
-/* Style the form fieldset */
+
 form fieldset {
   border: 1px solid black;
   border-radius: 10px;
@@ -169,21 +64,22 @@ form fieldset {
 
   }
 
-/* Style the form legend */
+
+
 form legend {
   font-size: 4em;
   margin-bottom: 10px;
   font-weight: bold;
 }
 
-/* Style form labels */
+
 form label.form-control-label {
   display: block;
-  font-size: 2em;
+  font-size: 3em;
   margin-bottom: 5px;
 }
 
-/* Style form input and textarea fields */
+
 form input.form-control,
 form textarea.form-control {
   width: 100%;
@@ -192,7 +88,6 @@ form textarea.form-control {
   box-sizing: border-box;
 }
 
-/* Style the submit button */
 form .btn-outline-info {
   background-color: grey;
   color: white;
@@ -202,7 +97,7 @@ form .btn-outline-info {
   cursor: pointer;
 }
 
-/* Hover effect for the submit button */
+
 form .btn-outline-info:hover {
   background-color: blue;
   border: 1px solid blue;
@@ -291,19 +186,19 @@ font-size: 2em;
 }
 
 .custom-card .card-body {
-    /* Customize the card body styling */
+
     padding: 20px;
-    text-align: center; /* Center text within the card body */
+    text-align: center;
 }
 
 .custom-card h3 {
-    /* Customize the styling of the h3 tag */
+
     color: DarkSlateGray;
     font-size: 18px;
 }
 
 .custom-card .nav-link {
-    /* Customize the styling of the anchor tag */
+
     text-decoration: none;
     color: black;
     font-weight: bold;

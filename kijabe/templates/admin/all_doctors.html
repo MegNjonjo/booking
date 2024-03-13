@@ -1,0 +1,41 @@
+{% extends "admin/layout.html" %}
+{% block content %}
+
+
+    <div class="my-2">
+        <form action="" method="POST" style="width:100%">
+            <div class="d-flex align-items-center">
+                <input type="text" name="search" id="search" class="form-control-label">
+                <button type="submit" class="btn btn-success " style="margin-left:10px;">Search</button>
+            </div>
+        </form>
+    </div>
+    <div class="my-2">
+        <div class="table">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Department</th>
+                        <th>Contact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for doctor in doctors %}
+                    <tr>
+                        <td>{{doctor.id}}</td>
+                        <td>{{doctor.username}}</td>
+                        <td>{{doctor.email}}</td>
+                        <td>{{doctor.department}}</td>
+                        <td>{{doctor.contact}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

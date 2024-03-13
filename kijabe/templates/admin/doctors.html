@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="container-form">
-    <form method="POST" action="{{ url_for('register') }}">
+    <form method="POST" action="{{ url_for('register_doctor') }}">
         {{ form.hidden_tag() }}
         <fieldset class="form-group">
             <legend class="border-bottom mb-4">Register</legend>
@@ -73,15 +73,18 @@
         <div class="form-group">
             {{ form.submit(class="btn btn-outline-info") }}
         </div>
-        <div class="border-top pt-3">
-            <span class="text-muted">
-        Already Have An Account? <a class="ml-2" href="{{ url_for('login') }}">Sign In</a>
-            </span>
-        </div>
     </form>
 </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
 
 
 

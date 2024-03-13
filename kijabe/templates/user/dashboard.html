@@ -1,28 +1,46 @@
 {% extends "user/layout.html" %}
 {% block content %}
 
-<header class="nav-header">
-<nav class="navigation">
-        <a href="{{ url_for('home')}}">Home</a>
-        <a href="{{ url_for('services')}}">Services</a>
-        <a href="/">Wellness Packages</a>
-        <a href="/">Contact Us</a>
-        <a href="/">Feedback</a>
-        <a class="btn-info" href="{{ url_for('login') }}">Login</a>
-
-</nav>
-</header>
+<div style="display: flex; align-items: center; justify-content: center; border-bottom: 1px solid grey;">
+    <img src="{{ url_for('static', filename='img/IMG_3.png') }}" style="max-height: 100px; max-width: 100px; margin-right: 10px;">
+    <h1 style="margin: 0;">
+        Kijabe Hospital Management System
+    </h1>
+</div>
 
 <div class="user-container">
     <div class="menu-row">
-        <a href="" class="menu-btn">Dashboard</a>
         <a href="" class="menu-btn">Profile</a>
-        <a href="" class="menu-btn">Appointments</a>
+        <a href="{{ url_for('my_appointments') }}" class="menu-btn">My Appointments</a>
+        <a href="{{ url_for('book_appointment') }}" class="menu-btn">Book Appointment</a>
         <a href="{{ url_for('logout')}}" class="menu-btn">Logout</a>
+    </div>
 
+    <div class="dashboard-section">
+        <div style="margin-bottom: 20px;">
+            <h2>Dashboard</h2>
+        </div>
+        <div class="appointment-status" style="width: 30%; margin-right: 20px;">
+            <h3>Appointment Status</h3>
+            <p>Your next appointment is on <strong>March 15, 2024</strong>.</p>
+
+        </div>
+
+        <div class="upcoming-appointments" style="width: 30%; margin-right: 20px;">
+            <h3>Upcoming Appointments</h3>
+            <ul>
+            {% for appointment in appointments %}
+                <li>{{ appointment.date }} at {{ appointment.time }}</li>
+            {% endfor %}
+    </ul>
+        </div>
+
+        <div class="medical-history" style="width: 30%;">
+            <h3>Medical History</h3>
+            <p>No medical history available.</p>
+
+        </div>
     </div>
 </div>
-
-
 
 {% endblock %}
